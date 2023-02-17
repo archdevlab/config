@@ -5,8 +5,11 @@ call plug#begin('$HOME/.local/share/nvim/site/autoload/')
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'powerline/powerline'
+Plug 'tpope/vim-fugitive'
+Plug 'Firef0x/PKGBUILD.vim'
 " Plug 'itchyny/lightline.vim'
-" Plug 'neovim/nvim-lspconfig'
+" Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -52,6 +55,12 @@ colorscheme onedark
 
 """"" end of onedark plugin
 
+""""" powerline plugin
+
+let g:Powerline_symbols = 'fancy'
+
+""""" end of powerline plugin
+
 """"" vim-airline plugin
 
 let g:airline#extensions#tabline#enabled = 1
@@ -62,6 +71,9 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
 
 let g:airline_statusline_ontop=1
+
+let g:airline_powerline_fonts = 1
+
 let g:airline_theme='onedark'
 
 """"" end of vim-airline plugin
@@ -87,24 +99,28 @@ syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
-set cursorline              " highlight current cursorline
+" set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
-
-set ts=8 sts=2 sw=2 et
-
-set encoding=utf-8
-
 set completeopt=noinsert,menuone,noselect
 set hidden
 set inccommand=split
-" set relativenumber
 set splitbelow splitright
 set title
 set ttimeoutlen=0
 
+" archlinux config
+set ts=8 sts=2 sw=2 et
+
+" encoding config
+set encoding=utf-8
+
+" disable buttom bar
 set laststatus=0 ruler
+
+" disable vertical bar
+set colorcolumn=
 
 """"" end of general setting
