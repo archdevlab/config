@@ -19,6 +19,9 @@ alias fgrep='fgrep --color=auto'
 # Vim
 alias vim="vim -c 'startinsert'"
 
+# Neovim
+alias nv="nvim -c 'startinsert'"
+
 # Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
