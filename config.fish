@@ -16,8 +16,17 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Vim
-alias vim="vim -c 'startinsert'"
+# Git
+fish_git_prompt
+set __fish_git_prompt_show_informative_status 1
+set __fish_git_prompt_use_informative_chars 1
+set __fish_git_prompt_showdirtystate 1
+set __fish_git_prompt_showuntrackedfiles 1
+set __fish_git_prompt_showupstream auto
+set __fish_git_prompt_showstashstate 1
+set __fish_git_prompt_shorten_branch_len 10
+set __fish_git_prompt_describe_style describe
+set __fish_git_prompt_showcolorhints 1
 
 # Neovim
 alias nv="nvim -c 'startinsert'"
@@ -35,4 +44,4 @@ alias flush-pacman-uneeded="sudo pacman -Qtdq | sudo pacman -Rns - || true && su
 alias flush-system="sudo du -h /var/log && sudo du -h /var && sudo journalctl --disk-usage && sudo journalctl --vacuum-size=0.1M && sudo journalctl --verify && sudo du -a | sort -n -f | head -n 20"
 
 # Update pacman mirrorlist with reflector for better download speed
-alias update-mirror='sudo reflector --verbose --country us -l 10 --sort rate --save /etc/pacman.d/mirrorlist'
+alias update-mirror="sudo reflector --verbose --country us -l 10 --sort rate --save /etc/pacman.d/mirrorlist"
