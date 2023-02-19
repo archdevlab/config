@@ -30,6 +30,7 @@ set __fish_git_prompt_showcolorhints 1
 
 # Neovim
 alias nv="nvim -c 'startinsert'"
+alias snv="sudo nvim -c 'startinsert'"
 
 # Grub
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
