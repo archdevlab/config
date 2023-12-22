@@ -7,10 +7,6 @@ alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
 alias l.='exa -a | egrep "^\."'
 
-# pacman and yay
-alias update='sudo pacman -Syyuu'                 # update only standard pkgs
-alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
-
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -27,6 +23,10 @@ set __fish_git_prompt_showstashstate 1
 set __fish_git_prompt_shorten_branch_len 10
 set __fish_git_prompt_describe_style describe
 set __fish_git_prompt_showcolorhints 1
+
+# pacman
+alias update='sudo pacman -Syyuu'
+alias unlock='sudo rm /var/lib/pacman/db.lck'
 
 # Neovim
 alias nv="nvim -c 'startinsert'"
